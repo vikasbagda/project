@@ -1,0 +1,825 @@
+
+
+
+
+
+
+ 
+
+   
+  
+  
+   
+
+  
+   
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+    
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<!-- session time out script start -->
+
+<script>
+/*
+var requestST;
+var shouldAlertUserST = true; 
+var lastAccessedTimeST = '03/15/2023 16:27:33';		
+
+function sessionTracking()	
+{     
+      window.setInterval( sessionCalculation, 60000);	//track session every 60 secs or 1 minute
+}
+function  sysDateReformat(sysDate){
+  
+     var temDate =sysDate.split(" ") 
+    MM=temDate[0].substring(0,2)-1; // from month (0-11)
+    DD=temDate[0].substring(3,5); // ...day
+    YY=temDate[0].substring(6,10); // ...year
+    HH=temDate[1].substring(0,2); // ...hours
+    Min=temDate[1].substring(3,5); // ...minutes
+    Sec=temDate[1].substring(6,8);
+    //alert("Year == "+YY+ " \nMonth== "+ MM+ " \nDay== "+DD+ " \nHours == " +HH+" \nMin== "+Min+" \nSec == "+Sec)
+    return  new Date(YY,MM,DD,HH,Min,Sec);
+   
+}
+function sessionCalculation()
+{		
+	var currentDate = new Date();  //reset to current date	
+ 
+	var sysdate = sysDateReformat(lastAccessedTimeST);
+ 
+ var diff= Math.round((currentDate - sysdate)/1000); // sec
+ 
+  //alert('currentime'+currentDate +':'+'last'+sysdate+''+diff);
+
+	if( (diff > 600) && shouldAlertUserST ) //greater then 600 secs or 10 min, alert user		
+  	{
+		shouldAlertUserST = false;
+		alertSessionTimeout();
+	}	
+}
+
+function reformatDt(dt)
+{
+      var curr_date = dt.getDate();
+  var curr_month = dt.getMonth();
+  curr_month++;
+  var curr_year = dt.getFullYear();
+  var curr_hour = dt.getHours();
+  var curr_min = dt.getMinutes();
+  var curr_sec = dt.getSeconds();
+  var reform_dt= (curr_month<=9?'0'+curr_month:curr_month)+'/'+(curr_date<=9?'0'+curr_date:curr_date)+'/'+curr_year+' '+curr_hour+':'+curr_min+':'+curr_sec;
+  return reform_dt;
+}
+
+function validateDate(startDate, EndDate){
+
+    FM=startDate.substring(0,2)-1; // from month (0-11)
+    FD=startDate.substring(3,5); // ...day
+    FY=startDate.substring(6,10); // ...year
+    FH=startDate.substring(11,13); // ...hours
+    FN=startDate.substring(14,16); // ...minutes
+    TM=EndDate.substring(0,2)-1;
+    TD=EndDate.substring(3,5);
+    TY=EndDate.substring(6,10);
+    TH=EndDate.substring(11,13);
+    TN=EndDate.substring(14,16);
+    FX=new Date(FY,FM,FD,FH,FN,0);
+    TX=new Date(TY,TM,TD,TH,TN,0);
+   Diff= Math.round((FX -TX)/1000); // sec
+  return Diff;
+}
+
+
+function alertSessionTimeout() {
+
+	//var answer = alert("Your session will expire in 5 minute(s).");
+var temp = "Hi";
+//	if (answer == true)
+//	{		
+//		extendSession();		
+//	}	
+}
+
+
+//function extendSession() {
+//  var url = "/elite/sessionTracking.do";
+// 
+//  // Perform the AJAX request using a non-IE browser.
+//  if (window.XMLHttpRequest) {
+//	requestST = new XMLHttpRequest();
+// 
+//    // Register callback function that will be called when
+//    // the response is generated from the server.
+//    requestST.onreadystatechange = gotResponseFromServer;
+// 
+//    try {
+//    	requestST.open("POST", url, true);
+//    } catch (e) {
+//       alert("Unable to active session from session");
+//    }
+// 
+//    requestST.send(null);
+//  // Perform the AJAX request using an IE browser.
+//  } else if (window.ActiveXObject) {
+//	  requestST = new ActiveXObject("Microsoft.XMLHTTP");
+// 
+//    if (requestST) {
+//      // Register callback function that will be called when
+//      // the response is generated from the server.
+//      requestST.onreadystatechange = gotResponseFromServer;
+// 
+//      requestST.open("GET", url, true);
+//      requestST.send();
+//    }
+//  }
+//}
+
+//Callback function to update page with count retrieved from server.
+//function gotResponseFromServer() {
+//if (requestST.readyState == 4) {
+// if (requestST.status == 200) {
+//
+//   shouldAlertUserST = true;   //now should alert user again after 5 mins 
+//   lastAccessedTimeST = new Date(parseInt(requestST.responseText));	        //since session is activated, new last accessed time   
+//   //alert("new lastAccessedTime : "+lastAccessedTimeST);      
+// } else {
+//   alert("Unable to active session from server.");
+// }
+//}
+//}
+*/
+</script>
+<!-- session time out script end -->
+</head>
+<!--<body onload="sessionTracking();" > <!-- session time out </body> -->
+
+
+</html> <!-- gopi added for session time out jsp -->
+
+   <!--gopi added for COCC13401 -->
+        
+    
+    
+  <!--gopi ended for COCC13401 -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
+       <!--Addded by ravali@Vulnerabilities Fixes for fixing pragma and cache-control -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache, no-store" />
+    <!--Ended by ravali@Vulnerabilities Fixes for fixing pragma and cache-control -->
+    <title>EMPOWER</title>
+    <LINK id=theme href="datepicker/jquery.datepick.css" type=text/css rel=stylesheet>
+      
+    <script type="text/javascript" src="scripts/Datandtime.js"></script> 
+    <script type="text/javascript" src="scripts/commonValidations.js"></script>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/flexigrid.js"></script>
+    <script type="text/javascript" src="menufiles/Calender_Prepaid.js"></script>
+    <script type="text/javascript" src="scripts/formValidations.js"></script>
+    <script type="text/javascript" src="scripts/boxover.js"></script>
+    <script type="text/javascript" src="scripts/actb1.js"></script>
+    <script type="text/javascript" src="scripts/AutoSuggest.js"></script>
+    <link href="menufiles/tree_styles.css" rel="stylesheet" type="text/css"/>
+    <link href="css/tablestyle.css" rel="stylesheet" type="text/css"/>
+    <link href="css/stylesheet.css" rel="stylesheet" type="text/css"/>
+    <link  href="css/flexigrid.css" rel="stylesheet" type="text/css" />
+    <link  href="css/LeftMenu.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="scripts/yahoo_2.js"></script>
+
+
+<SCRIPT src="datepicker/jquery-1.3.1.js" type=text/javascript></SCRIPT>
+<SCRIPT src="datepicker/jquery.datepick.js" type=text/javascript></SCRIPT>
+<SCRIPT src="datepicker/jquery.datepick-validation.js" type=text/javascript></SCRIPT>
+<SCRIPT src="datepicker/demo.js" type=text/javascript></SCRIPT>
+<!-- COCC5580 jyotsna start -->
+<script type="text/javascript" src="scripts/syncscroll.js"></script>
+<!-- COCC5580 jyotsna end -->
+
+    <script >
+$(window).load(function()
+  {    
+ 	var ht = parseInt ($(".gridstyle div").height());
+ var fullwidth = 100;
+	var halfwidth = 98;
+   if( ht > 200)
+	  {
+	    $(".gridstyle div").height(200);
+      $(".gridstyle div").css("overflow-y", "auto", "overflow-x", "hidden");
+      $(".gridstyle table").css("width", halfwidth+"%");
+      $(".gridstyle div table").css("width", halfwidth+"%");
+     /* $(".gridstyle table").width(740);
+      $(".gridstyle div table").width(740);*/
+	  }
+    else
+    {
+    /* $(".gridstyle table").width(750);
+     $(".gridstyle div table").width(750);*/
+     $(".gridstyle table").css("width", fullwidth+"%");
+     $(".gridstyle div table").css("width", fullwidth+"%");
+   
+    }
+    
+ 	var divht = parseInt ($(".headerfix").height());
+	var divwt = parseInt ($(".headerfix table").width());
+	var halfwidth = 98;
+  var headheight = divht+24;
+  if( divht > 250)
+	{ 	
+	  $(".headerfix").height(250);
+	  $(".headerfix").css("overflow-y", "auto");	 
+	}
+	else
+	{
+		 $(".headerfix").height(headheight);
+     $(".headerfix").css("overflow-y", "hidden");	
+	}
+	 if(divwt >= 970)
+	  {   
+      
+       $(".headerfix").width(970);
+      $(".headerfix table").css("width", halfwidth+"%");
+      $(".headerfix #long").width(divwt);	 
+      $(".headerfix").css("overflow", "auto");	 
+     }
+	  else
+	  {
+      $(".headerfix table").css("width", halfwidth+"%");
+	  }
+  
+});
+</script>
+<style type="text/css">
+            div.yui-b p {
+                margin: 0 0 .5em 0;
+                color: #999;
+            }
+            div.yui-b p strong {
+                font-weight: bold;
+                color: #000;           
+            }
+            
+            div.yui-b p em {
+                color: #000;            
+            }            
+            
+            h1 {
+                font-weight: bold;
+                margin: 0 0 1em 0;
+                padding: .25em .5em;
+                background-color: #ccc;
+            }
+
+            #productsandservices {
+                margin: 0 0 10px 0;	
+				line-height:30px;	
+            }
+        </style>
+  </head>
+ <link href="css/GridStyle.css" rel="stylesheet" type="text/css" />
+   <link rel="stylesheet" type="text/css" href="css/tabview.css">
+  <!--  jyotsna start added class -->
+
+
+<script type="text/javascript" src="scripts/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="scripts/element.js"></script>
+<script type="text/javascript" src="scripts/tabview.js"></script>
+
+<script type="text/javascript">
+    var myTabs = new YAHOO.widget.TabView('demo', { activeIndex: 0 } ); 
+</script>
+
+<script type='text/javascript' src='menufiles/yahoo-dom-event.js'></script>
+<script type='text/javascript' src='menufiles/animation.js'></script>
+<script type='text/javascript' src='menufiles/container_core.js'></script>
+<script type='text/javascript' src='menufiles/menu.js'></script>
+<script type='text/javascript' src='menufiles/menudata.js'></script>
+<link rel="stylesheet" type="text/css" href="css/menu.css" />
+<script> 
+
+//added by Roly for IN5172
+document.onkeydown = function ()
+ {	/*if ( event.ctrlKey) 
+ { 	alert("This function is disabled.");
+ return false;
+ } */
+
+ // COMMENTED AS PART OF COCC13201
+// var code = window.event.keyCode;  
+//// alert(code);
+// if (event.ctrlKey && event.keyCode == 78)
+// {
+//  // code for ctrl-n
+//  alert('Ctrl+N is disabled');
+//   return false;
+//}
+
+//if (event.ctrlKey && event.keyCode == 99 || event.ctrlKey && event.keyCode == 67)
+//{
+//  // code for ctrl-c
+//  alert('Ctrl+C is disabled');
+//   return false;
+//}      
+//added by ravali for BRSD91
+
+//if (event.ctrlKey && event.keyCode == 99 || event.ctrlKey && event.keyCode == 67)
+//{
+//  // code for ctrl-c
+//  alert('Ctrl+C is disabled');
+//   return false;
+//}      
+
+//ended by ravali for BRSD91
+// END OF COCC13201 CONTROL C FUNCTIONALITY
+//alert(code);
+
+               /* if((code == 18) || (code == 33) ||(code == 35) ||(code == 36) ||
+                (code == 37) ||(code == 94) || (code == 42)
+                || (code == 43) ||(code == 188) ||(code == 192)||(code == 61))
+                {
+                  alert("This function is disabled.");  
+                }*/
+}
+   
+   // COMMENTED AS PART OF COCC13201                
+//            var message="Due to security reason, Right Click is not allowed";
+//          function clickIE4(){
+//          if (event.button==2){
+//          alert(message);
+//          return false;
+//          }
+//          }
+//          function clickNS4(e){
+//          if (document.layers||document.getElementById&&!document.all){
+//          if (e.which==2||e.which==3){
+//          alert(message);          
+//          return false;         
+//          }
+//           }
+//          }
+//          
+//          if (document.layers){
+//          document.captureEvents(Event.MOUSEDOWN);
+//          document.onmousedown=clickNS4;
+//          }
+//          else if (document.all&&!document.getElementById){
+//          document.onmousedown=clickIE4;
+//          }
+//          document.oncontextmenu=new Function("alert(message);return false;")         
+    // END OF COCC13201 CHANGES 
+//ended by Roly for IN5172
+aSubmenuData = [{id: "1^Initiation",  itemdata: [{text: "Sales Opportunity", submenu: {id: "6^Sales Opportunity",itemdata: [{text: "Feasibility", submenu: {id: "7^Feasibility",itemdata: [{text: "Submitted Requests", url: "RoleWiseSubmittedRequestAction.do" },{text: "Circuit Details", url: "RoleWiseSubmittedRequestAction.do?methodToCall=redirectToCircuitId" },{text: "Drafts", url: "DraftsListAction.do" },{text: "Wireline Voice Feasibility", url: "CWSDWirelineAction.do" },{text: "Wireline Data and Voice Feasibility", submenu: {id: "90^Wireline Data and Voice Feasibility",itemdata: [{text: "FAN/SRF Report", url: "FanReportAction.do" },{text: "Download FAN/SRF Report", url: "FanReportAction.do?methodToCall=navigateGenerateReport" },{text: "Search Fan/SRF", url: "DLCFANSearchAction.do" },{text: "Pending Requests", url: "FANPendingAction.do" },{text: "Navigate to CB", url: "EprocessLogin.do" },{text: "Exception Pending Request", url: "DLCExceptionPending.do" }]}},{text: "Wireline Data SRF", submenu: {id: "95^Wireline Data SRF",itemdata: [{text: "Upload Documents", url: "SRFUploadDocs.do" },{text: "Closed SRF Pending Requests", url: "SRFPendingAction.do" },{text: "Pending Requests", url: "SRFPendingAction.do" },{text: "SearchFanByUser", url: "SearchFanByUser.do" }]}}]}}]}},{text: "Approve Delegated", url: "DelegateApprovalAction.do?methodToCall=apprDelegatedPgLoad" },{text: "Approve SOID", url: "SoidApproveAction.do" },{text: "Delegate Approvals", url: "DelegateApprovalAction.do" }]},{id: "2^Company Management",  itemdata: [{text: "Company", submenu: {id: "24^Company",itemdata: [{text: "Company Information Card", url: "AICAction.do" }]}}]},{id: "4^Order Login",  itemdata: [{text: "SRF Worklist", url: "circleCwsdAction.do" }]},{id: "5^Others",  itemdata: [{text: "PPM Report", url: "PpmReportAction.do" },{text: "DMS Search", submenu: {id: "149^DMS Search",itemdata: [{text: "Account/CAF Search", url: "AccCafDmsAction.do" },{text: "Company Name Search", url: "AccSearchDmsAction.do" }]}},{text: "Offline CAF for other product", url: "SoidCafAction.do" }]},{id: "148^Help",  itemdata: [{text: "Using the Menu", url: "HelpListAction.do?methodToCall=openHelpFile&docId=33" },{text: "Opportunity Specific", url: "HelpListAction.do?methodToCall=openHelpFile&docId=34" },{text: "Feasibilities Specific", submenu: {id: "155^Feasibilities Specific",itemdata: [{text: "Wireline Voice Feasibility", url: "HelpListAction.do?methodToCall=openHelpFile&docId=38" },{text: "Wireless Feasibility", url: "HelpListAction.do?methodToCall=openHelpFile&docId=37" },{text: "Tariff Feasibility", submenu: {id: "164^Tariff Feasibility",itemdata: [{text: "3G Dongle", url: "HelpListAction.do?methodToCall=openHelpFile&docId=43" },{text: "Audio Conferencing", url: "HelpListAction.do?methodToCall=openHelpFile&docId=44" },{text: "CMO", submenu: {id: "168^CMO",itemdata: [{text: "CDMA Blackberry Services", url: "HelpListAction.do?methodToCall=openHelpFile&docId=45" },{text: "SMS Gateway", url: "HelpListAction.do?methodToCall=openHelpFile&docId=46" },{text: "CDMA Postpaid Mobile", url: "HelpListAction.do?methodToCall=openHelpFile&docId=47" }]}},{text: "FWT-WALKY", url: "HelpListAction.do?methodToCall=openHelpFile&docId=48" },{text: "GSM Mobile", submenu: {id: "185^GSM Mobile",itemdata: [{text: "GSM SMS Gateway", url: "HelpListAction.do?methodToCall=openHelpFile&docId=49" }]}},{text: "ISDN_PRI", url: "HelpListAction.do?methodToCall=openHelpFile&docId=50" },{text: "ISDN-BRI", url: "HelpListAction.do?methodToCall=openHelpFile&docId=51" },{text: "Level-DID-PRI", url: "HelpListAction.do?methodToCall=openHelpFile&docId=52" },{text: "Standard Wireline", url: "HelpListAction.do?methodToCall=openHelpFile&docId=53" },{text: "Vdata", submenu: {id: "165^Vdata",itemdata: [{text: "HSIA", url: "HelpListAction.do?methodToCall=openHelpFile&docId=54" },{text: "Non-HSIA", url: "HelpListAction.do?methodToCall=openHelpFile&docId=55" },{text: "HSIA Router", url: "HelpListAction.do?methodToCall=openHelpFile&docId=56" },{text: "WiFi HSIA", url: "HelpListAction.do?methodToCall=openHelpFile&docId=57" },{text: "Vdata Roadwarrior", url: "HelpListAction.do?methodToCall=openHelpFile&docId=58" },{text: "HSIA Roadwarrior", url: "HelpListAction.do?methodToCall=openHelpFile&docId=59" },{text: "HSIA REV B", url: "HelpListAction.do?methodToCall=openHelpFile&docId=60" },{text: "HSIA REV B ROAD WARRIOR", url: "HelpListAction.do?methodToCall=openHelpFile&docId=61" }]}},{text: "Walky10", submenu: {id: "171^Walky10",itemdata: [{text: "WALKY-10", url: "HelpListAction.do?methodToCall=openHelpFile&docId=62" },{text: "Wireless EPABX Solution", url: "HelpListAction.do?methodToCall=openHelpFile&docId=63" }]}},{text: "Wireless", submenu: {id: "170^Wireless",itemdata: [{text: "Single Number Solution", url: "HelpListAction.do?methodToCall=openHelpFile&docId=64" },{text: "Wireless", url: "HelpListAction.do?methodToCall=openHelpFile&docId=65" },{text: "Wireless EPABX Solution", url: "HelpListAction.do?methodToCall=openHelpFile&docId=66" }]}}]}},{text: "Device Availability", url: "HelpListAction.do?methodToCall=openHelpFile&docId=36" },{text: "Number Blocking", url: "HelpListAction.do?methodToCall=openHelpFile&docId=35" }]}},{text: "PO Management", url: "HelpListAction.do?methodToCall=openHelpFile&docId=39" },{text: "Order / CAF Management", url: "HelpListAction.do?methodToCall=openHelpFile&docId=40" },{text: "Help for Approvers", url: "HelpListAction.do?methodToCall=openHelpFile&docId=41" },{text: "ITSME", url: "HelpListAction.do?methodToCall=openHelpFile&docId=42" },{text: "Who is Who", url: "HelpListAction.do?methodToCall=openHelpFile&docId=72" },{text: "TCS Escalation matrix ", url: "HelpListAction.do?methodToCall=openHelpFile&docId=73" }]},{id: "227^Favorites",  itemdata: [{text: "Search SOID", url: "SalesInitiationAction.do" },{text: "Search CircuitID", url: "circuitIdSearch.do" },{text: "Search Fan/SRF", url: "DLCFANSearchAction.do" },{text: "FAN Pending Requests", url: "FANPendingAction.do" },{text: "SRF Pending Requests", url: "SRFPendingAction.do" }]}];
+     </script>
+
+  <!--<body onload="clock();" onUnload="if((window.event.clientX<0) && (window.event.clientY<0)){ logout('/EMPower');}">-->
+  <body class="yui-skin-sam" onload="clock();" >
+  <!--  jyotsna end -->
+  <table width="990" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="header_row1">
+    <!-- Header Row 1 Start -->
+     <!-- Header Row 1 Start -->
+
+
+
+
+   
+   
+   <script> 
+  function logout(url)
+  {
+  
+    url = url+'/LogoutAction.do?userId=tct86000249';
+     //Do the Ajax call
+    if (window.XMLHttpRequest){ // Non-IE browsers
+      req = new XMLHttpRequest();      
+      //A call-back function is define so the browser knows which function to call after the server gives a reponse back
+      req.onreadystatechange = populateCityBox;      
+      try 
+      {         
+            req.open("GET", url+"&tempTime="+(new Date()), true); //was get         
+      }
+      catch (e) 
+      { 
+      }
+      req.send(null);      
+    } else if (window.ActiveXObject) 
+      { // IE      logout
+      req = new ActiveXObject("Microsoft.XMLHTTP");
+      if (req) {
+      req.onreadystatechange = populateCityBox;     
+        req.open("GET", url+"&tempTime="+(new Date()), true);
+        req.send();
+      }
+    }
+    function populateCityBox(){
+     if (req.readyState == 4) { // Complete
+      if (req.status == 200) { // OK response
+        }
+      }else {  
+            //alert("Problem with server response:" + req.statusText);
+        }
+    }
+}
+
+function callHome()
+{
+  document.headerForm.action = "HomeAction.do";
+  document.headerForm.methodToCall.value="loadData";
+  document.headerForm.submit();
+} 
+     </script>
+<form name="headerForm" method="POST" style="padding:0px; margin:0px;">      
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+
+  <tr>
+    <td class="username">Welcome&nbsp; Sameer&nbsp;&nbsp;
+    </td>
+        <td width="300"><input type="HIDDEN" name="methodToCall" value=""/>   
+&nbsp;Last login date: &nbsp;  15-Mar-2023 14:53:14 PM</td>
+
+    <td class="time tright">Time &amp; Date&nbsp;-&nbsp;<span id="pendule" class="datetime"></span>, <span class="monyear"> <script type="text/javascript">  displayDate(); </script></span></td>
+      
+   <td class="logout">&nbsp;|&nbsp;<a href="#" onclick="callHome();">Home</a>&nbsp;|&nbsp;<a href="" onclick="logout('/EMPower');">Logout</a></td> 
+
+  </tr>
+
+  
+</table>
+</form>
+<!-- Header Row 1 End -->
+
+      <!-- Header Row 1 End -->
+    </td>
+  </tr>
+  <tr>     <!-- Header Row 2 Start -->
+      
+
+  
+  
+  
+  <!-- Header Row 2 Start -->
+ <td class="header_row2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+    <tr><td class="tleft"><img src="images/tata-logo.gif" width="134" height="82" alt="" /></td>
+ <td class="username"  width="100%">
+ <table  border="0" width="100%" cellspacing="0" align="left" cellpadding="0">
+ 
+ <tr><td width="10%" >Role </td><td width="90%"> : Circle Transmission Team</td></tr>
+ <tr><td >Circle </td><td>: RJ</td></tr>
+ <!--Changes Start by Chaitanya for Shadow Roles-->
+ 
+  <!--Changes End by Chaitanya for Shadow Roles-->
+ 
+ </table></td>    
+    <td class="tright"><img src="images/empowerlogo.gif" width="244" height="82" border="0" alt="EmpowerLogo"/></td>
+
+    </tr></table></td>
+
+  <!-- Header Row 2 End -->
+
+
+        <!-- Header Row 2 End -->
+    </tr>
+  <tr>     <!-- Body White color Start -->
+    <td class="innerwhite" style="	vertical-align:top; ">
+    <!-- Body Table Start -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="left">
+     <tr><td class="tleft">
+        
+      <div id="productsandservices" class="yuimenubar yuimenubarnav">
+                            <div class="bd">
+                                <ul class="first-of-type" id="menuul"> </ul>
+                            </div>
+                        </div>      </td></tr>
+
+    <tr><td>&nbsp;</td></tr>
+
+    <tr>
+      <td class="ttop bodydefheight"> 
+              
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>EMPOWER</title>
+    <script type="text/javascript" src="scripts/Datandtime.js">
+    </script>
+    <script type="text/javascript" >
+var browserUrl = document.URL;
+//alert(browserUrl);
+
+  function validateLoginDetails()
+  {
+    var userId = document.logindetailsForm.userId.value;
+    var password = document.logindetailsForm.password.value;
+    var splCharTest=/[\W_]/g;
+    var upperCaseTest= /[A-Z]/;
+    var lowerCaseTest= /[a-z]/;
+    var numberTest= /[0-9]/;
+    
+    if(userId==null || userId=="")
+    {
+        alert("Please enter User name.");
+        document.logindetailsForm.userId.value=""
+        document.logindetailsForm.userId.focus();
+        return false;
+    }
+    else if(password==null || password=="")
+    {
+        alert("Please enter Password.");
+        document.logindetailsForm.password.value=""
+        document.logindetailsForm.password.focus();
+        return false;
+    }
+      document.logindetailsForm.brsrUrl.value=browserUrl;
+//      alert(document.logindetailsForm.brsrUrl.value);
+      document.logindetailsForm.submit();
+  }
+  
+  function doOnload()
+    {
+      document.logindetailsForm.userId.focus();        
+    }
+   
+    </script>
+    <link href="css/tablestyle.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body onload="clock();doOnload(); " >
+    <table width="990" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td>
+          <!-- Header Table Start -->
+          <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <!-- User Name and Logout Start -->
+            <tr>
+              <td class="header_row1">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="username"/>
+                    <td width="450">&nbsp;</td>
+                    <td class="time">Time &amp; Date    &nbsp;<span id="pendule" class="datetime"></span>, <span class="datetime"> <script type="text/javascript">  displayDate(); </script></span></td>
+                    <td class="logout">&nbsp;</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- User Name and Logout End -->
+            <!-- Logo  Start-->
+            <tr>
+              <td colspan="2" class="header_row2">
+                <img src="images/tata-logo.gif" width="134" height="83" alt=""/>
+              </td>
+            </tr>
+            <!-- Logo  End-->
+          </table>
+          <!-- Header Table End -->
+        </td>
+      </tr>
+      <tr>
+        <td class="innerwhite">
+          <form name="logindetailsForm" method="POST" action="/EMPower/LoginAction.do" onsubmit="return false;">
+            <!-- Body Table Start -->
+            <input type="HIDDEN" name="brsrUrl" value="" />
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr><td style="padding:10px 0px; text-align:center"><img src="images/empowerlogo_blue.gif" /></td></tr>
+              <tr>
+                <td style="padding:20px 0px;height:350px">
+            
+                  <!-- Login Table Start-->
+                  <table width="45%" border="0" align="center" cellpadding="1" cellspacing="0">
+                    <tr>
+                      <td colspan="3">
+                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td class="redcolor tright">* Indicates mandatory field</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="L_login_left"/>
+                      <td align="left" valign="top" class="L_login_body">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="1">
+                          <tr>
+                            <td colspan="3" class="heading_1">Login</td>
+                          </tr>
+                          <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td rowspan="4" class="lockimg">&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td>&nbsp;</td>
+                            <td class="error">
+                              
+                            
+                            
+                           
+                            </td>
+                          </tr>
+                          
+                          
+                          
+                          <tr>
+                            <td class="l_username" width="50%">User name<span class="redtxt">*</span></td>
+                            <td width="50%">
+                              <input type="text"  name="userId" autocomplete="off" class="inputbox" maxlength="20"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td height="26" class="l_username">Password <span class="redtxt">*</span> </td>
+                            <td>
+                              <input type="password"  name="password" class="inputbox" maxlength="20" autocomplete="off"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="3" height="20px"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="3" class="login_btn">
+                              <input type="image" name="imageField" id="imageField" src="images/login_btn.gif" onclick="javascript:validateLoginDetails();"/>
+                            </td>
+                          </tr>      
+                          <tr><td colspan="3">&nbsp;</td></tr>
+                          <tr><td colspan="3"> 
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr><td class="defaultlinks">EMPOWER User ID blocked?</td>
+                          <td class="defaultlinks"><a href="http://idm.ttsl.com:7777/idm/user/login.jsp">Click Here to Unblock</a>
+                          <tr><td colspan="2">&nbsp;</td></tr>
+                          <tr><td>&nbsp;</td><td class="defaultlinks "><a HREF="javascript:openFAQs('http://www.tatatele.in/FAQs/faqsAction.do?appname=EMPOWER&func_name=EMP&user_name=dealer&user_password=NR/Tu7G9tXSklTKww1b03Q==','','scrollbars=yes,resizable=1')"><b>Please click here for FAQs</b></A>
+                          </td></tr>
+                          
+                          </table>
+                          </td></tr>
+                        </table>
+                      </td>
+                      <td class="L_login_right"/>
+                    </tr>
+                  </table>
+                  <!-- Login Table End -->
+                </td>
+              </tr>
+                 <tr><td class="defaultlinks tright"><a href="http://www.tatatele.in/FAQs/BrowserSetting_MCCI_Apps.doc">Click here for Browser Settings</a></td></tr>
+              <tr><td style="font-weight:normal; text-align:justify; padding:10px 20px; line-height:16px;">
+              <span class="redcolor"><b>Warning </b></span>: The access to TTSL network is restricted for authorized personnel only. Access to TTSL Network is monitored and reviewed on regular basis, therefore you are advised not to attempt unauthorized access to TTSL network and disconnect immediately. Any dissemination, use, review, distribution, printing or copying of information in whole or in part is strictly prohibited. 
+                TTSL reserves the right to take legal action against such personnel.
+              </td></tr>
+            </table>
+            <!-- Body Table Start -->
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <!-- Footer Table Start -->
+          <table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td class="footer_home">
+                <div class="footer-nav">&copy; 2008 TTSL</div>
+                <div class="explorertxt">Best viewed with 1024 x 768 resolution, Internet Explorer 6 and above.</div>
+              </td>
+            </tr>
+          </table>
+          <!-- Footer Table End -->
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+<script>
+
+  function login()
+  {
+    document.logindetailsForm.action = "LoginAction.do";
+    document.logindetailsForm.submit();
+  }
+  //changed by Phani for CR COCC11311
+  function openFAQs(theURL,winName,features)
+  { //v2.0
+  window.open(theURL,winName,features);
+  }
+
+</script>
+
+      </td>
+      </tr>
+      
+    </table> 
+     <!-- Body Table End -->
+    </td>
+      <!-- Body White color End -->
+  </tr>
+  <tr>
+    <td >
+    <!-- Footer  Start -->
+     <!-- Footer  Start -->
+<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="footer_home">
+      <div class="footer-nav"> Terms &amp; Conditions</a>  &nbsp; <span id="yearid"></span> &nbsp;  &copy;  Tata Teleservices Limited</div>
+      <div class="explorertxt">Best viewed with 1024 x 768 resolution, Internet Explorer 6 and above.</div>
+    </td>
+  </tr>
+</table>
+<!-- Footer  End -->
+<script language="javascript">
+function addEventHandler(oNode, evt, oFunc, bCaptures)
+{
+	if (typeof(window.event) != "undefined")
+		oNode.attachEvent("on"+evt, oFunc);
+	else
+		oNode.addEventListener(evt, oFunc, bCaptures);
+}
+addEventHandler(window, "load", getYearfun, false);
+
+function getYearfun(){
+            var d = new Date();
+            var year = d.getFullYear();           
+            var yearID = document.getElementById("yearid");
+            yearID.innerHTML = year;            
+      }
+</script>
+     <!-- Footer  End -->
+    </td>  
+  </tr>
+</table>
+  </body>
+
+<script>
+
+var MenuUL = document.getElementById("menuul");
+var topMenuLen = aSubmenuData.length;
+var labels =[];
+
+for(var i=0; i< topMenuLen; i++){              
+                        var label = aSubmenuData[i].id;
+                         var templabels = label.split('^');
+                         labels[labels.length] =  templabels[1];     
+}
+
+for(var i=0; i< topMenuLen; i++){              
+            MenuUL.innerHTML += "<li class='yuimenubaritem first-of-type'><a class='yuimenubaritemlabel href='#" + aSubmenuData[i].id +"'> " +labels[i]+"</a></li>";
+}
+
+</script>
+
+
+<script type="text/javascript" language="javascript">  
+ 
+//Added by Priyanka for time out session
+           var timeout = '1793000';    //30000
+                var t = ''; 
+           var timer = setInterval(
+           function() 
+           { 
+            timeout -= 1000; 
+            window.status = time(timeout);  
+            if (timeout <= 0) 
+            { 
+            clearInterval(timer); 
+            window.navigate("logout.jsp");
+            alert('Session expired.Please login again.'); 
+            }
+            if (timeout == '300000')  //10000
+            { 
+       //     clearInterval(timer); 
+        //    window.navigate("logout.jsp")
+            alert('Your Session will expire in 5 min.'); 
+
+          //  return "Your session will timeout in " + t + " minutes.";   
+
+            } 
+            }, 1000);     
+           function two(x) { return ((x > 9) ? "" : "0") + x }     
+           function time(ms) {   
+  
+               var sec = Math.floor(ms / 1000);   
+               ms = ms % 1000    
+               var min = Math.floor(sec / 60);   
+               sec = sec % 60;   
+               t = two(sec);     
+               var hr = Math.floor(min / 60);   
+               min = min % 60;   
+               t = two(min) + ":" + t;   
+                  
+               return "Your session will timeout in " + t + " minutes.";   
+           }   
+ 
+//Ended by Priyanka for time out session
+</script>
+
+</html>
+
+
